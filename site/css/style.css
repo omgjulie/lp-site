@@ -26,6 +26,10 @@ time, mark, audio, video, textarea {
 
 /* ======= GENERAL STYLE ===========*/
 
+/* * {
+    outline: 2px dotted rgba(6, 133, 1, 0.5);
+} */
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
@@ -48,8 +52,13 @@ body {
 }
 
 .section-sm {
-    padding-top: 80px;
-    padding-bottom: 40px;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.section-xs {
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 .container {
@@ -71,7 +80,7 @@ body {
     clear: both;
 }
 
-h1, h2, h5, .team-member, button {
+h1, h2, h3, h5, .team-member p, button {
     font-family: 'Dosis', sans-serif;
     text-transform: uppercase;
 }
@@ -86,10 +95,12 @@ h2 {
     letter-spacing: 0.5em;
     font-weight: 400;
     color: rgba(17, 17, 17, 1);
+    margin-bottom: 30px;
 }
 
 h3 {
     font-size: 15px;
+    font-weight: 400;
 }
 
 h4 {
@@ -98,7 +109,7 @@ h4 {
 }
 
 h5 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.4em;
 }
@@ -107,6 +118,18 @@ h5 {
     width: 100%;
     float: left;
     padding: 15px;
+}
+
+[class*="icon-block"] {
+    text-align: center;
+}
+
+[class*="icon-block"] span {
+    font-size: 48px;
+}
+
+span + h5 {
+    margin-top: 25px;
 }
 
 .invert {
@@ -118,8 +141,61 @@ h5 {
     color: rgba(255, 255, 255, 1);
 }
 
-.invert p {
+.invert p,
+.invert q {
     opacity: 0.7;
+}
+
+.invert cite {
+    opacity: 0.3;
+}
+
+[class*="col-"] .button {
+    padding: 0 0 30px 0;
+}
+
+[class*="col-"] .button a {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid transparent;
+    border-radius: 2px;
+    height: auto;
+    padding: 8px 37px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+[class*="col-"] .button:hover a {
+    background: rgba(255, 255, 255, 1);
+}
+
+.totop-button {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid #c6c6c6;
+    z-index: 100000;
+    transition: 0.3s;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.totop-button:hover {
+    cursor: pointer;
+    border-bottom-color: #111;
+}
+
+.totop-button.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* ======== Header style ======== */
@@ -232,11 +308,15 @@ h5 {
     font-size: 12px;
 }
 
+.team-member h3 {
+    letter-spacing: 0.4em;
+}
+
 /* ======== END Section 2 style ======== */
 
 /* ======== Section 3 style ======== */
 
-.section-3 h2, .list-service {
+.section-3 h2 {
     text-align: center;
 }
 
@@ -260,46 +340,30 @@ h5 {
     color: rgba(17, 17, 17, 1);
 }
 
-.icon-block span {
-    font-size: 48px;
-}
-
 /* =============== END Section 3 style ======== */
 
 /* =============== Section 4 Style ============== */
 
+.section-4 h2 {
+    font-weight: 300;
+    letter-spacing: 0.3em;
+}
+
+.col-md-6_block {
+    padding-top: 19%;
+    padding-bottom: 17%;
+
+}
+
 .col-md-6 .text {
     margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.col-md-6 .button {
-    padding: 30px 0;
-}
-
-.col-md-6 .button a {
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid transparent;
-    border-radius: 2px;
-    height: auto;
-    padding: 8px 37px;
-    font-size: 14px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-
-.col-md-6 .button:hover a {
-    background: rgba(255, 255, 255, 1);
+    margin-bottom: 45px;
 }
 
 .imac {
     margin-top: -45px;
     position: relative;
     overflow: hidden;
-    
 }
 
 .imac .imac-screen {
@@ -371,7 +435,7 @@ h5 {
     padding-bottom: 40px;
 }
 
-button {
+.button-group button {
     display: inline-block;
     margin: 0 30px;
     font-size: 13px;
@@ -382,13 +446,310 @@ button {
     border: none;
     text-align: center;
     cursor: pointer;
-    outline: none;
     
 }
 
 .is-checked {
     color: rgba(17, 17, 17, 1);
 }
+
+/* ========== SECTION 7 Style ========== */
+
+.col-lg-1 {
+    text-align: center;
+}
+
+.section-7 h2 {
+    font-weight: 300;
+}
+
+/* =============== END Section 7 style ======== */
+
+/* ========== SECTION 8 Style ========== */
+
+.section-8 h2 {
+    text-align: center;
+}
+
+.icon-block-2 {
+    margin: 20px 0;
+    font-weight: 400;
+    color: rgba(17, 17, 17, 1)
+}
+
+/* =============== END Section 8 style ======== */
+
+/* =============== CAROUSEL ==================== */
+
+.section-140-25 {
+    padding-top: 70px;
+    padding-bottom: 25px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.owl-item-inner {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.owl-item-inner q {
+    line-height: 30px;
+}
+
+.owl-item-inner cite {
+    font-size: 11px;
+    line-height: 38px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.noquotes::before , .noquotes::after {
+    content: no-close-quote;
+}
+
+.icon-quote {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 20px;
+}
+
+.owl-dots span {
+    width: 6px;
+    height: 6px;
+    display: block;
+    background-color: rgba(254, 254, 254, 0.8);
+    position: relative;
+    z-index: 1000;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.owl-dots .active span {
+    background-color: transparent;
+    border: 1px solid rgba(254, 254, 254, 0.8);
+}
+
+
+/* =================================== Option 1 */
+/* идея, которая не воплотилась в жизнь, повернута стрелка не ховерится */
+
+/* .owl-nav {
+    position: static;
+}
+
+.owl-prev:hover, .owl-next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+
+}
+
+.owl-prev {
+    right: 0;
+    
+}
+
+.owl-next {
+    left: 0;
+    transform: translate(50%, 50%) rotate(45deg);
+} */
+
+
+
+/* ======================================== Option 2 */
+/* работает частично, стрелочки хз где, базовые стрелки остались внизу, */
+
+/* .owl-next:before {
+    content: "\f105";
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    transform: translate(50%, -350%) rotate(45deg);
+    z-index: 1000;
+    font-family: 'FontAwesome';
+    background-color: rgb(255, 255, 255);
+    color: rgba(17, 17, 17, 1);
+    font-size: 16px;
+
+} */
+
+/* ========================================== Option 3 */
+/* работает частично, стрелочки хз где, базовые стрелки остались внизу  */
+
+.owl-next:before {
+    content: "\f105";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 40px 30px 0;
+    border-color: transparent #ffffff transparent transparent;
+    right: 0;
+    z-index: 1000;
+    font-family: 'FontAwesome';
+    color: rgba(17, 17, 17, 1);
+    font-size: 16px;
+    transform: translate(0,-265%);
+}
+
+.owl-prev:before {
+    content: "\f104";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 0 30px 40px;
+    border-color: transparent transparent transparent #ffffff;
+    left: 0;
+    z-index: 1000;
+    font-family: 'FontAwesome';
+    color: rgba(17, 17, 17, 1);
+    font-size: 16px;
+    transform: translate(0,-265%);
+}
+
+/* =============================================== Option 4 */
+/* не работает бекграунд, кнопки съехали */
+
+/* button.owl-prev , 
+button.owl-next {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 105px;
+    font-size: 16px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    z-index: 6;
+}
+
+.owl-next span {
+    right: 0;
+    transform: translate(50%, -392%) rotate(45deg);
+}
+
+.owl-prev span {
+    left: 0;
+    transform: translate(-50%, -392%) rotate(45deg);
+} */
+
+/* =============== END Сarousel Section ======== */
+
+/* ================= MAP Section Style =========== */
+
+#map {
+    height: 415px;
+    width: 100%;
+}
+
+.relative {
+    position: relative;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(17, 17, 17, 0.95);
+    transition: 0.4s;
+}
+
+.map-overlay h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.75;
+    letter-spacing: 0.3em;
+}
+
+.map-overlay:hover {
+    cursor: pointer;
+}
+
+.map-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.map-overlay h3:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    width: 0;
+    background-color: currentColor;
+    transition: 0.3s;
+    height: 1px;
+    bottom: -5px;
+    
+}
+
+.map-overlay h3:hover:before {
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.map-overlay h3:after {
+    content: '\f107';
+    font-family: 'FontAwesome';
+    font-size: 16px;
+    letter-spacing: 0.3em;
+    margin-left: 10px;
+}
+
+.fa-map-marker {
+    font-size: 14px;
+    color: rgba(17, 17, 17, 1);
+    display: block;
+    position: absolute;
+    background-color: rgba(254, 254, 254, 1);
+    bottom: 55%;
+    right: 51%;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    transform: translate(50%, -50%) rotate(45deg);
+    text-align: center;
+
+}
+
+/* .map-overlay h3:before {
+    content: "\f041";
+    display: block;
+    font-family: 'FontAwesome';
+    font-size: 14px;
+    color: rgba(34, 34, 34, 1);
+    background-color: rgba(254, 254, 254, 1);
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 1px;
+    padding-left: 1px;
+    text-align: center;
+} */
 
 /* ========= Media ========= */
 
@@ -429,6 +790,10 @@ button {
 
     .col-md-6 {
         width: 50%;
+    }
+
+    .section-140-25 {
+        padding-top: 140px;
     }
 
 }
@@ -479,4 +844,7 @@ button {
         width: 33.3333%;
     }
 
+    .owl-item-inner {
+        width: 45%;
+    }
 }
