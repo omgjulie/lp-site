@@ -27,7 +27,7 @@ time, mark, audio, video, textarea {
 /* ======= GENERAL STYLE ===========*/
 
 /* * {
-    outline: 2px dotted rgba(6, 133, 1, 0.5);
+    outline: 1px dotted rgba(6, 133, 1, 0.5);
 } */
 
 body {
@@ -80,7 +80,7 @@ body {
     clear: both;
 }
 
-h1, h2, h3, h5, .team-member p, button {
+h1, h2, h3, h5, .team-member p, button, dt, .footer-text p  {
     font-family: 'Dosis', sans-serif;
     text-transform: uppercase;
 }
@@ -132,9 +132,12 @@ span + h5 {
     margin-top: 25px;
 }
 
+.bg-color-black {
+    background-color: black;
+}
+
 .invert {
     color: rgba(255, 255, 255, 1);
-    background-color: black;
 }
 
 .invert h2 {
@@ -198,6 +201,8 @@ span + h5 {
     visibility: visible;
 }
 
+
+
 /* ======== Header style ======== */
 
 .site-header {
@@ -236,7 +241,7 @@ span + h5 {
 
 /* ======== END Header style ======== */
 
-/* ======== Section 1 style ======== */
+/* ======== MAIN | SECTION 1 style ======== */
 
 .section-1 {
     background-image: url(../img/section-1-bg.jpg);
@@ -276,9 +281,9 @@ span + h5 {
     transform: rotate(-45deg);
 }
 
-/* ======== END Section 1 style ======== */
+/* ======== END MAIN | SECTION 1 style ======== */
 
-/* ======== Section 2 style ======== */
+/* ======== ABOUT US | SECTION 2 style ======== */
 
 .text blockquote {
     line-height: 38px;
@@ -312,9 +317,9 @@ span + h5 {
     letter-spacing: 0.4em;
 }
 
-/* ======== END Section 2 style ======== */
+/* ======== END ABOUT US | SECTION 2 style ======== */
 
-/* ======== Section 3 style ======== */
+/* ======== SERVICES | SECTION 3 style ======== */
 
 .section-3 h2 {
     text-align: center;
@@ -340,9 +345,9 @@ span + h5 {
     color: rgba(17, 17, 17, 1);
 }
 
-/* =============== END Section 3 style ======== */
+/* =============== END SERVICES | SECTION 3 style ======== */
 
-/* =============== Section 4 Style ============== */
+/* =============== iMAC | SECTION 4 Style ============== */
 
 .section-4 h2 {
     font-weight: 300;
@@ -388,9 +393,9 @@ span + h5 {
     transform: translateY(-88%);
 }
 
-/* =============== END Section 4 style ======== */
+/* =============== END iMAC | SECTION 4 style ======== */
 
-/* =============== Section 5 Style ============== */
+/* =============== PORTFOLIO | SECTION 5 Style ============== */
 
 .portfolio {
     margin-left: auto;
@@ -405,9 +410,9 @@ span + h5 {
     margin-bottom: 50px;
 }
 
-/* =============== END Section 5 style ======== */
+/* =============== END PORTFOLIO | SECTION 5 style ======== */
 
-/* ============== ISOTOPE Style =============== */
+/* ============== ISOTOPE | SECTION 6 =============== */
 
 .grid {
     display: flex;
@@ -453,7 +458,9 @@ span + h5 {
     color: rgba(17, 17, 17, 1);
 }
 
-/* ========== SECTION 7 Style ========== */
+/* ============== END ISOTOPE | SECTION 6 Style */
+
+/* ========== START PROJECT | SECTION 7 Style ========== */
 
 .col-lg-1 {
     text-align: center;
@@ -463,9 +470,9 @@ span + h5 {
     font-weight: 300;
 }
 
-/* =============== END Section 7 style ======== */
+/* =============== END START PROJECT | SECTION 7 style ======== */
 
-/* ========== SECTION 8 Style ========== */
+/* ========== WHY CHOOSE US | SECTION 8 Style ========== */
 
 .section-8 h2 {
     text-align: center;
@@ -477,9 +484,9 @@ span + h5 {
     color: rgba(17, 17, 17, 1)
 }
 
-/* =============== END Section 8 style ======== */
+/* =============== END WHY CHOOSE US | SECTION 8 style ======== */
 
-/* =============== CAROUSEL ==================== */
+/* ===== CAROUSEL | WHAT PEOPLE SAY? | SECTION 9 ========== */
 
 .section-140-25 {
     padding-top: 70px;
@@ -585,7 +592,7 @@ span + h5 {
 /* ========================================== Option 3 */
 /* работает частично, стрелочки хз где, базовые стрелки остались внизу  */
 
-.owl-next:before {
+/* .owl-next:before {
     content: "\f105";
     display: block;
     position: absolute;
@@ -617,25 +624,52 @@ span + h5 {
     color: rgba(17, 17, 17, 1);
     font-size: 16px;
     transform: translate(0,-265%);
-}
+} */
 
 /* =============================================== Option 4 */
 /* не работает бекграунд, кнопки съехали */
 
-/* button.owl-prev , 
+button.owl-prev , 
 button.owl-next {
     display: block;
     position: absolute;
     width: 50px;
     height: 50px;
-    line-height: 105px;
-    font-size: 16px;
     text-align: center;
-    background-color: rgb(255, 255, 255);
     z-index: 6;
 }
 
-.owl-next span {
+button.owl-prev {
+    left: 0;
+    bottom: 0;
+    top: -31%;
+}
+
+button.owl-next {
+    right: 0;
+    bottom: 0;
+    top: -31%;
+}
+
+/* .owl-next:before {
+    display: block;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+    z-index: 5;
+} */
+
+.owl-carousel .owl-nav button.owl-next:before {
+    background-color: rgb(255, 255, 255);
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 5;
+}
+
+/* .owl-next span {
     right: 0;
     transform: translate(50%, -392%) rotate(45deg);
 }
@@ -645,9 +679,258 @@ button.owl-next {
     transform: translate(-50%, -392%) rotate(45deg);
 } */
 
-/* =============== END Сarousel Section ======== */
+/* ==== END CAROUSEL | WHAT PEOPLE SAY? | SECTION 9 Style == */
 
-/* ================= MAP Section Style =========== */
+/* ================ LATEST NEWS | SECTION 10 Style ========== */
+
+.col-xs-6 {
+    width: 50%;
+}
+
+.fa-angle-right:before {
+    content: "\f105";
+    font-size: 12px;
+}
+
+.all-news a {
+    float: right;
+}
+
+.news-block {
+    padding-bottom: 50px;
+}
+
+.news-block img {
+    width: 100%;
+    filter: grayscale(1);
+    transition: 0.2s;
+}
+
+.news-block img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+}
+
+.news-block a, .all-news a, .read-more-btn a {
+    text-decoration: none;
+}
+
+.news-block h3 {
+    letter-spacing: 0.2em;
+    color: rgba(119, 119, 119, 1);
+    margin-bottom: 6px;
+}
+
+.news-block span, .all-news a {
+    font-family: "Dosis", sans-serif;
+    font-size: 15px;
+    color: rgba(153, 153, 153, 1);
+    font-weight: 400;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+}
+
+.news-block span {
+    margin-bottom: 15px;
+}
+
+.news-block img, .news-block p {
+    margin-bottom: 21px;
+}
+
+.read-more-btn {
+    border-radius: 2px;
+    border: 1px solid transparent;
+}
+
+.read-more-btn a {
+    border-radius: 2px;
+    border: 1px solid transparent;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: rgba(119, 119, 119, 1);
+    background-color: rgba(0, 0, 0, 0.1);
+    height: auto;
+    padding: 8px 14px;
+}
+
+.read-more-btn a:hover {
+    border: 1px solid transparent;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* =========== END LATEST NEWS | SECTION 10 Style ========== */
+
+/* =========== SUBSCRIBE | SECTION 11 Style =============== */
+
+.col-sm-6 h3 {
+    letter-spacing: 0.3em;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 23px;
+    margin-bottom: 23px;
+}
+
+.subscribe-form input[type="email"] {
+    width: 293px;
+    margin-right: 5px;
+}
+
+/* ========== END SUBSCRIBE | SECTION 11 Style =========== */
+
+/* ================= CONTACT | SECTION 12 Style ============ */
+
+
+.contact {
+    position: relative;
+   
+}
+
+.contact-icon {
+    position: relative;
+    bottom: 50%;
+    top: 50%;
+}
+
+.contact .fa-phone {
+    position: absolute;
+    background-color: rgba(17, 17, 17, 1);
+    width: 25px;
+    height: 25px;
+    border-radius: 2px;
+    transform: translate(50%, -50%) rotate(45deg);
+    text-align: center;
+}
+
+.contact .fa-phone:before {
+    content: "\f095";
+    position: absolute;
+    color: rgba(248,248,248,1);
+    font-size: 14px;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+    top: -7px;
+    right: 4px;
+    transform: rotate(-47deg);
+}
+
+.contact .fa-map-marker {
+    position: absolute;
+    background-color: rgba(17, 17, 17, 1);
+    width: 25px;
+    height: 25px;
+    border-radius: 2px;
+    transform: translate(50%, -50%) rotate(45deg);
+    text-align: center;
+}
+
+.contact .fa-map-marker:before {
+    content: "\f041";
+    position: absolute;
+    color: rgba(248,248,248,1);
+    font-size: 14px;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+    top: -7px;
+    right: 5px;
+    transform: rotate(-47deg);
+}
+
+.contact .fa-envelope {
+    position: absolute;
+    background-color: rgba(17, 17, 17, 1);
+    width: 25px;
+    height: 25px;
+    border-radius: 2px;
+    transform: translate(50%, -50%) rotate(45deg);
+    text-align: center;
+}
+
+.contact .fa-envelope:before {
+    content: "\f0e0";
+    position: absolute;
+    color: rgba(248,248,248,1);
+    font-size: 14px;
+    line-height: 38px;
+    letter-spacing: 0.2em;
+    top: -7px;
+    right: 3px;
+    transform: rotate(-47deg);
+}
+
+dt {
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    font-weight: 400;
+}
+
+dd {
+    color: rgba(68, 68, 68, 1);
+}
+
+form input[name="name"], 
+form input[name="email"],
+form textarea[name="message"] {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid rgba(0,0,0, 0.1);
+    border-radius: 2px;
+    padding: 6px 12px;
+    width: 100%;    
+}
+
+form input[name="name"], 
+form input[name="email"] {
+    height: 37px;
+}
+
+form textarea[name="message"] {
+    resize: none;
+}
+
+form input[name="name"] {
+    margin-bottom: 15px;
+}
+
+.submit-button {
+    text-align: right;
+    
+    
+}
+
+input[type="submit"] {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 2px;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: rgb(255, 255, 255);
+    background-color: rgba(17, 17, 17, 1);
+    line-height: 26px;
+    padding: 4px 25px;
+    cursor: pointer;
+}
+
+.form-text span {
+    font-weight: 400;
+    color: rgba(170, 170, 170, 1);
+}
+
+/* ========= END CONTACT | SECTION 12 Style ======== */
+
+/* ================= MAP | SECTION 13 Style =========== */
 
 #map {
     height: 415px;
@@ -718,8 +1001,6 @@ button.owl-next {
 }
 
 .fa-map-marker {
-    font-size: 14px;
-    color: rgba(17, 17, 17, 1);
     display: block;
     position: absolute;
     background-color: rgba(254, 254, 254, 1);
@@ -730,26 +1011,107 @@ button.owl-next {
     border-radius: 2px;
     transform: translate(50%, -50%) rotate(45deg);
     text-align: center;
+}
+
+.fa-map-marker:before {
+    content: "\f041";
+    transform: rotate(-47deg);
+    position: absolute;
+    top: 3px;
+    right: 6px;
+    font-size: 14px;
+    color: rgba(17, 17, 17, 1);
+}
+
+/* =================END MAP | SECTION 13 Style =========== */
+
+/* =================== FOOTER ====================== */
+
+.footer-logo {
+    margin-bottom: 30px;
+}
+
+.footer-link a {
+    font-size: 14px;
+    width: 25px;
+    height: 25px;
+    line-height: 38px;
+    position: relative;
+    margin: 0 6px;
+    text-align: center;
+    display: inline-block;
+    color: rgba(17, 17, 17, 1);
+    display: inline-block;
+}
+
+.footer-link a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #111;
+    border-radius: 2px;
+    transform: rotate(45deg);
 
 }
 
-/* .map-overlay h3:before {
-    content: "\f041";
-    display: block;
-    font-family: 'FontAwesome';
-    font-size: 14px;
-    color: rgba(34, 34, 34, 1);
-    background-color: rgba(254, 254, 254, 1);
-    width: 20px;
-    height: 20px;
-    border-radius: 2px;
-    transform: rotate(45deg);
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-right: 1px;
-    padding-left: 1px;
-    text-align: center;
-} */
+.fa-facebook:before {
+    content: "\f09a";
+    position: absolute;
+    top: 7px;
+    left: 8px;
+}
+
+.fa-twitter:before {
+    content: "\f099";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+}
+
+.fa-behance:before {
+    content: "\f1b4";
+    position: absolute;
+    top: 6px;
+    left: 5px;
+}
+
+.fa-linkedin:before {
+    content: "\f0e1";
+    position: absolute;
+    top: 6px;
+    left: 7px;
+}
+
+.fa-pinterest:before {
+    content: "\f0d2";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+}
+
+.footer-text {
+    margin-top: 110px;
+}
+
+.footer-text p {
+    font-size: 12px;
+    letter-spacing: 0.5em;
+    font-weight: 400;
+    color: rgba(17, 17, 17, 1);
+    line-height: 24px;
+    margin-bottom: 4px;
+}
+
+.footer-text span {
+    color: rgba(153, 153, 153, 1);
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* =================== END FOOTER ====================== */
 
 /* ========= Media ========= */
 
@@ -796,6 +1158,10 @@ button.owl-next {
         padding-top: 140px;
     }
 
+    .footer-text span, .all-news a, .news-block span{
+        font-size: 11px;
+    }
+
 }
 
 @media (min-width: 992px) {
@@ -834,7 +1200,7 @@ button.owl-next {
     .section-1 {
     padding-top: 200px;
     padding-bottom: 200px;
-}
+    }
 
     .section-1 h1+h4 {
         margin-top: 75px;
@@ -847,4 +1213,5 @@ button.owl-next {
     .owl-item-inner {
         width: 45%;
     }
+
 }
