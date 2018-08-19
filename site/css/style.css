@@ -26,10 +26,6 @@ time, mark, audio, video, textarea {
 
 /* ======= GENERAL STYLE ===========*/
 
-/* * {
-    outline: 1px dotted rgba(6, 133, 1, 0.5);
-} */
-
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
@@ -502,6 +498,7 @@ span + h5 {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+    width: 60%;
 }
 
 .owl-item-inner q {
@@ -545,98 +542,14 @@ span + h5 {
     border: 1px solid rgba(254, 254, 254, 0.8);
 }
 
-
-/* =================================== Option 1 */
-/* идея, которая не воплотилась в жизнь, повернута стрелка не ховерится */
-
-/* .owl-nav {
-    position: static;
-}
-
-.owl-prev:hover, .owl-next:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-
-}
-
-.owl-prev {
-    right: 0;
-    
-}
-
-.owl-next {
-    left: 0;
-    transform: translate(50%, 50%) rotate(45deg);
-} */
-
-
-
-/* ======================================== Option 2 */
-/* работает частично, стрелочки хз где, базовые стрелки остались внизу, */
-
-/* .owl-next:before {
-    content: "\f105";
-    display: block;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    right: 0;
-    transform: translate(50%, -350%) rotate(45deg);
-    z-index: 1000;
-    font-family: 'FontAwesome';
-    background-color: rgb(255, 255, 255);
-    color: rgba(17, 17, 17, 1);
-    font-size: 16px;
-
-} */
-
-/* ========================================== Option 3 */
-/* работает частично, стрелочки хз где, базовые стрелки остались внизу  */
-
-/* .owl-next:before {
-    content: "\f105";
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 30px 40px 30px 0;
-    border-color: transparent #ffffff transparent transparent;
-    right: 0;
-    z-index: 1000;
-    font-family: 'FontAwesome';
-    color: rgba(17, 17, 17, 1);
-    font-size: 16px;
-    transform: translate(0,-265%);
-}
-
-.owl-prev:before {
-    content: "\f104";
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 30px 0 30px 40px;
-    border-color: transparent transparent transparent #ffffff;
-    left: 0;
-    z-index: 1000;
-    font-family: 'FontAwesome';
-    color: rgba(17, 17, 17, 1);
-    font-size: 16px;
-    transform: translate(0,-265%);
-} */
-
-/* =============================================== Option 4 */
-/* не работает бекграунд, кнопки съехали */
+/* ----------------------------------- */
 
 button.owl-prev , 
 button.owl-next {
-    display: block;
-    position: absolute;
     width: 50px;
     height: 50px;
-    text-align: center;
-    z-index: 6;
+    position: absolute;
+    font-size: 15px;
 }
 
 button.owl-prev {
@@ -651,33 +564,13 @@ button.owl-next {
     top: -31%;
 }
 
-/* .owl-next:before {
-    display: block;
-    position: absolute;
-    background-color: rgb(255, 255, 255);
-    width: 50px;
-    height: 50px;
-    z-index: 5;
-} */
-
-.owl-carousel .owl-nav button.owl-next:before {
+.owl-carousel .owl-nav button.owl-prev:before {
+    width: 100%;
+    height: 100%;
     background-color: rgb(255, 255, 255);
     display: block;
     position: absolute;
-    width: 50px;
-    height: 50px;
-    z-index: 5;
 }
-
-/* .owl-next span {
-    right: 0;
-    transform: translate(50%, -392%) rotate(45deg);
-}
-
-.owl-prev span {
-    left: 0;
-    transform: translate(-50%, -392%) rotate(45deg);
-} */
 
 /* ==== END CAROUSEL | WHAT PEOPLE SAY? | SECTION 9 Style == */
 
@@ -787,82 +680,70 @@ button.owl-next {
 
 /* ================= CONTACT | SECTION 12 Style ============ */
 
-
 .contact {
-    position: relative;
-   
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center; 
+    width: 66.666%;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
 }
 
 .contact-icon {
     position: relative;
-    bottom: 50%;
-    top: 50%;
-}
-
-.contact .fa-phone {
-    position: absolute;
-    background-color: rgba(17, 17, 17, 1);
     width: 25px;
     height: 25px;
-    border-radius: 2px;
-    transform: translate(50%, -50%) rotate(45deg);
     text-align: center;
+    display: inline-block;
+    margin-right: 10px;
 }
 
-.contact .fa-phone:before {
+.contact-icon:before {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: rgba(17, 17, 17, 1);
+    transform: rotate(45deg);
+}
+
+.contact .contact-icon .fa-phone:before {
     content: "\f095";
     position: absolute;
     color: rgba(248,248,248,1);
     font-size: 14px;
     line-height: 38px;
-    letter-spacing: 0.2em;
-    top: -7px;
-    right: 4px;
-    transform: rotate(-47deg);
+    top: -6px;
+    left: 7px;
 }
 
-.contact .fa-map-marker {
-    position: absolute;
-    background-color: rgba(17, 17, 17, 1);
-    width: 25px;
-    height: 25px;
-    border-radius: 2px;
-    transform: translate(50%, -50%) rotate(45deg);
-    text-align: center;
-}
-
-.contact .fa-map-marker:before {
+.contact .contact-icon .fa-map-marker:before {
     content: "\f041";
     position: absolute;
     color: rgba(248,248,248,1);
     font-size: 14px;
     line-height: 38px;
-    letter-spacing: 0.2em;
-    top: -7px;
-    right: 5px;
-    transform: rotate(-47deg);
+    top: -6px;
+    left: 8px;
 }
 
-.contact .fa-envelope {
-    position: absolute;
-    background-color: rgba(17, 17, 17, 1);
-    width: 25px;
-    height: 25px;
-    border-radius: 2px;
-    transform: translate(50%, -50%) rotate(45deg);
-    text-align: center;
-}
-
-.contact .fa-envelope:before {
+.contact .contact-icon .fa-envelope:before {
     content: "\f0e0";
     position: absolute;
     color: rgba(248,248,248,1);
     font-size: 14px;
     line-height: 38px;
-    letter-spacing: 0.2em;
-    top: -7px;
-    right: 3px;
-    transform: rotate(-47deg);
+    top: -6px;
+    left: 5px;
 }
 
 dt {
@@ -873,6 +754,20 @@ dt {
 
 dd {
     color: rgba(68, 68, 68, 1);
+}
+
+.contact-form {
+    width: 66.6666%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+form.contact-form .row {
+    margin: -5px;
+}
+
+form.contact-form .row .col-md-6 {
+    padding: 5px;
 }
 
 form input[name="name"], 
@@ -886,7 +781,7 @@ form textarea[name="message"] {
     vertical-align: middle;
     border: 1px solid rgba(0,0,0, 0.1);
     border-radius: 2px;
-    padding: 6px 12px;
+    padding: 6px 12px 0px;
     width: 100%;    
 }
 
@@ -900,13 +795,11 @@ form textarea[name="message"] {
 }
 
 form input[name="name"] {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .submit-button {
     text-align: right;
-    
-    
 }
 
 input[type="submit"] {
@@ -1000,7 +893,7 @@ input[type="submit"] {
     margin-left: 10px;
 }
 
-.fa-map-marker {
+.map-section .fa-map-marker {
     display: block;
     position: absolute;
     background-color: rgba(254, 254, 254, 1);
@@ -1013,7 +906,7 @@ input[type="submit"] {
     text-align: center;
 }
 
-.fa-map-marker:before {
+.map-section .fa-map-marker:before {
     content: "\f041";
     transform: rotate(-47deg);
     position: absolute;
@@ -1041,7 +934,6 @@ input[type="submit"] {
     text-align: center;
     display: inline-block;
     color: rgba(17, 17, 17, 1);
-    display: inline-block;
 }
 
 .footer-link a:before {
@@ -1134,6 +1026,7 @@ input[type="submit"] {
         text-align: center;
     }
 
+    
 }
 
 @media (min-width: 768px) {
@@ -1162,6 +1055,14 @@ input[type="submit"] {
         font-size: 11px;
     }
 
+
+    .contact-block {
+        flex-direction: row;
+    }
+
+    /* .contact-icon {
+        margin-right: 10px;
+    } */
 }
 
 @media (min-width: 992px) {
